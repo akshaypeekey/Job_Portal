@@ -8,7 +8,7 @@ class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     action = (
         ('1', 'Admin'),
-        ('2', 'Recruter'),
+        ('2', 'Recruiter'),
         ('3', 'Candidate')
     )
     user_type = models.CharField(max_length=10, choices=action)

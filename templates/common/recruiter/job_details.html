@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+{% load static %}
+{% load crispy_forms_tags %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>job details</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Job company</th>
+                <th>Job place</th>
+                <th>Job type</th>
+                <th>Job title</th>
+                <th>Job category</th>
+                <th>Job skills</th>
+                <th>Job description</th>
+                <th>Job vacancy</th>
+                <th>Job experience</th>
+                <th>Job salary</th>
+                <th>Job offer end date</th>
+                <th>Job status</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            <tr>
+                <th>{{details.job_company}}</th>
+                <th>{{details.job_place}}</th>
+                <th>{{details.job_type}}</th>
+                <th>{{details.job_title}}</th>
+                <th>{{details.job_category}}</th>
+                <th>{{details.job_skills}}</th>
+                <th>{{details.job_description}}</th>
+                <th>{{details.job_vacancy}}</th>
+                <th>{{details.job_experience}}</th>
+                <th>{{details.job_salary}}</th>
+                <th>{{details.job_offer_end}}</th>
+                <th>{{details.job_status}}</th>
+            </tr>
+
+        </tbody>
+    </table>
+<a href="{% url 'edit_job' details.job_id %}">edit</a>
+</body>
+</html>

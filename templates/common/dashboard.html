@@ -7,12 +7,22 @@
     <title>Title</title>
 </head>
 <body>
-<h1>dashboard</h1>
+<h1>Dashboard</h1>
 <a href="{% url 'logout' %}" class="btn btn-danger">logout</a>
 <a href="{% url 'change_password' %}" class="btn btn-success">change password</a>
 <a href="{% url 'profile' %}" class="btn btn-success">profile settings</a>
+<hr>
+<h4>Recruiter</h4>
 <a href="{% url 'add_company' %}" class="btn btn-success">add company</a>
 <a href="{% url 'view_company' %}" class="btn btn-success">list company</a>
+<br>
+<a href="{% url 'add_job' %}" class="btn btn-success">add job</a>
+<a href="{% url 'view_job' %}" class="btn btn-success">list job</a>
+<hr>
+<h4>Candidate</h4>
+<a href="{% url 'list_job' %}" class="btn btn-success">list job</a>
+<a href="{% url 'applied_jobs' %}" class="btn btn-success">applied jobs</a>
+
 
 </body>
 </html>

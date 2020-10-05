@@ -85,7 +85,7 @@ class Job(models.Model):
     job_status = models.CharField(max_length=20, choices=action4)
 
     def __str__(self):
-        return self.job_id
+        return '%s (%s)' % (self.job_title, self.job_company)
 
 
 class Application(models.Model):

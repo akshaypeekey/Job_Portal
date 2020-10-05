@@ -12,7 +12,7 @@ from apps.userprofile.models import Profile
 
 class SignupView(CreateView):
     form_class = SignupForm
-    success_url = reverse_lazy('home')
+    success_url = reverse_lazy('index')
     template_name = 'userprofile/register.html'
 
 
