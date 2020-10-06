@@ -36,4 +36,6 @@ urlpatterns = [
     path('apply_details/<str:id>', CandidateJobDetails.as_view(), name='apply_details'),
     path('apply_job/<str:id>', PreApplyView.as_view(), name='apply_job'),
     path('applied_jobs/', AppliedJobs.as_view(), name='applied_jobs'),
+
+    path('job_applications/', JobApplicationsView.as_view(), name='job_applications'),
 ]

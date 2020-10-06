@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+{% load static %}
+{% load crispy_forms_tags %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="{% static 'admin/css/vendor/login.css' %}" rel="stylesheet">
+</head>
+<body>
+<h1>applied jobs</h1>
+<table>
+    <thead>
+        <th>job</th>
+        <th>company</th>
+        <th>apply time</th>
+        <th>application status</th>
+        <th>Action</th>
+
+    </thead>
+    {% for jobs in object_list %}
+    <tbody>
+        <td>{{ jobs.job_id }}</td>
+        <td>{{ jobs.company_id }}</td>
+        <td>{{ jobs.apply_time }}</td>
+        <td>{{ jobs.application_status }}</td>
+
+        {% empty %}
+        <td>No jobs yet.</td>
+    </tbody>
+    {% endfor %}
+</table>
+</body>
+</html>

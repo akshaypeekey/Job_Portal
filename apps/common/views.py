@@ -95,7 +95,6 @@ class CandidateJobDetails(LoginRequiredMixin, DetailView):
 
     def get_object(self):
         id = self.kwargs.get("id")
-        print(id)
         return get_object_or_404(Job, job_id=id)
 
 
@@ -123,6 +122,12 @@ class PreApplyView(LoginRequiredMixin, TemplateView):
             context = {'form': form}
             return render(request, self.template_name, context)
 
+
 class AppliedJobs(LoginRequiredMixin, ListView):
     model = Application
     template_name = 'common/candidate/applied_jobs.html'
+
+
+class JobApplicationsView(LoginRequiredMixin, ListView):
+    model = Application
+    template_name = 'common/recruiter/job_applications.html'
